@@ -1,5 +1,7 @@
- const app = require('./app');
- require('./database');
+/* Envioroment Variables */
+require('dotenv').config();                      
+const app = require('./app');
+require('./database');
 
 /* Initialize Server */
 async function main(){

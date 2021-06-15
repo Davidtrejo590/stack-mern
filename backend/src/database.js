@@ -1,9 +1,10 @@
-/* Connect whit database */
-
 const mongoose = require('mongoose');
 
-const URI = 'mongodb://localhost/mernstack';
+/* Create Database - it come from env file*/
+console.log(process.env.MONGODB_URI);
+const URI = process.env.MONGODB_URI ? process.env.MONGODB_URI : 'mongodb://localhost/test';
 
+/* Connect whit database */
 mongoose.connect(URI, {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -11,6 +12,8 @@ mongoose.connect(URI, {
 });
 
 const connection = mongoose.connection;
+
+/* Connection Successfully */
 connection.once('open', () => {
     console.log('Database is conected.');
 });
