@@ -5,8 +5,8 @@ require('./database');
 
 /* Initialize Server */
 async function main(){
-    await app.listen(4000);
-    console.log(`Server on Port 4000`);
+    await app.listen(app.get('port'));
+    console.log(`Server on Port ${app.get('port')}`);
 }
 
 /* Run Server */
