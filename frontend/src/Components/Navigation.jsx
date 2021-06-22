@@ -19,7 +19,7 @@ class Navigation extends Component {
                                 <Link className="nav-link" to='/notes'>Create Note</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to='/users/:id'>Create User</Link>
+                                <Link className="nav-link" to='/users'>Create User</Link>
                             </li>
                         </ul>
                     </div>
@@ -28,5 +28,6 @@ class Navigation extends Component {
         );
     }
 }
+
 
 export default Navigation;
