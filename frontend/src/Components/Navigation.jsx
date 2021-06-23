@@ -16,7 +16,7 @@ class Navigation extends Component {
                                 <Link className="nav-link" to='/'>Note List</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to='/notes'>Create Note</Link>
+                                <Link className="nav-link" to='/create'>Create Note</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to='/users'>Create User</Link>

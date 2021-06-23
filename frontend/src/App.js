@@ -14,7 +14,8 @@ class App extends Component {
         <Navigation />
         <div className="container p-4">
           <Route path='/' exact component={NoteList} />
-          <Route path='/notes' component={CreateNote} />
+          <Route path='/create' component={CreateNote} />
+          <Route path='/edit/:id' component={CreateNote} />
           <Route path='/users/' component={CreateUser} />
         </div>
       </BrowserRouter>
