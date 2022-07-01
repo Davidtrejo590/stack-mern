@@ -9,7 +9,7 @@ class CreateUser extends Component {
     state = { users: [], username: '' }
 
     /* Call API from Backend */
-    async componentDidMount() {
+    componentDidMount() {
         this.getUsers();
     }
 

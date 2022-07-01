@@ -8,10 +8,10 @@ class CreateNote extends Component {
     state = { users: [], userSelected: '',  title: '', content: '', date: new Date(), editing: false, _id: '' }
 
     /* Call data from Users API */
-    async componentDidMount(){
+    componentDidMount(){
         this.getUsers();
         if( this.props.match.params.id ){
-            await this.setState({ editing: true, _id: this.props.match.params.id});
+            this.setState({ editing: true, _id: this.props.match.params.id});
             this.getNote();
         }
     }
