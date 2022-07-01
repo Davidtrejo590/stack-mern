@@ -8,7 +8,7 @@ router.route('/')
 
 router.route('/:id')
     .get(getNote)
-    .put(updateNote)
+    .patch(updateNote)
     .delete(deleteNote)
 
 

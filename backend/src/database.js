@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-/* Create Database - it come from env file*/
+/* Create Database - it comes from env file*/
 const URI = process.env.MONGODB_URI ? process.env.MONGODB_URI : 'mongodb://localhost/test';
 
 /* Connect whit database */

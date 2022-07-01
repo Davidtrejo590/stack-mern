@@ -23,19 +23,19 @@ usersController.createUser = async (req, res) => {
     res.json({message: 'POST- User Created'});
 }
 
-/* PUT an User */
+/* PATCH an User */
 usersController.updateUser = async (req, res) => {
     const userName = req.body;
     await User.findOneAndUpdate({_id: req.params.id}, {
         username: userName.username
     });
-    res.json({message: 'PUT - User Updated'});
+    res.json({message: 'PATCH - User Updated'});
 }
 
 /* DELETE an User */
 usersController.deleteUser = async (req, res) => {
     await User.findByIdAndDelete(req.params.id);
-    res.json({message: 'GET- User Deleted'});
+    res.json({message: 'DELETE- User Deleted'});
 }
 
 module.exports = usersController;

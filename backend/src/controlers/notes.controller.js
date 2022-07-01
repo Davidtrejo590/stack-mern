@@ -26,7 +26,7 @@ notesController.createNote = async (req, res) => {
     res.json({message: 'POST - Note Created'});
 }; 
 
-/* PUT a Note */
+/* PATCH a Note */
 notesController.updateNote = async (req, res) => {
     const { title, content, author } = req.body;
     await Note.findOneAndUpdate({_id: req.params.id}, {
@@ -34,13 +34,13 @@ notesController.updateNote = async (req, res) => {
         content: content,
         author: author
     });
-    res.json({message: 'PUT - Note Updated'});
+    res.json({message: 'PATCH - Note Updated'});
 }; 
 
 /* DELETE a Note */
 notesController.deleteNote = async (req, res) => {
     const note = await Note.findByIdAndDelete(req.params.id);
-    res.json(note);
+    res.json({message: 'DELETE - Note Deleted'});
 }; 
 
 
